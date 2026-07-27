@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace Domain.DeviceManagement
 {
-    public enum Specifications
+    public enum DeviceStatus
     {
-        Wattage,
-        LifespanHours,
-        ColorTemperature
+        On,
+        Off,
+        Standby
     }
 }

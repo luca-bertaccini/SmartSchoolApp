@@ -1,4 +1,4 @@
-﻿namespace Domain
+﻿namespace Domain.SchoolManagement
 {
     public class SchoolMembership
     {

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace Domain.DeviceManagement
 {
-    public enum EnergyProfile
+    public enum Specifications
     {
-        Eco,
-        Normal,
-        HighPerformance
+        Wattage,
+        LifespanHours,
+        ColorTemperature
     }
 }
