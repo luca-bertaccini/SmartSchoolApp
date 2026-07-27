@@ -15,6 +15,7 @@ namespace Domain
         {
             if(string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Value cannot be empty", nameof(value));
+            Value = value;
         }
 
         public Name Create(string value) => new Name(value);
