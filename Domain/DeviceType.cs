@@ -9,7 +9,7 @@ namespace Domain
     public class DeviceType
     {
         public Guid TypeId { get; set; }
-        public string Name { get; set; }
+        public Name Name { get; set; }
         public string Capabilities { get; set; }
         public EnergyProfile EnergyProfile { get; set; }
     }

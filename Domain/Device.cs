@@ -9,7 +9,7 @@ namespace Domain
     public class Device
     {
         public Guid DeviceId { get; set; }
-        public string Name { get; set; }
+        public Name Name { get; set; }
         public DeviceType DeviceType { get; set; }
         public DeviceStatus Status { get; set; }
         public Guid SchoolId { get; set; }
@@ -25,6 +25,7 @@ namespace Domain
             InstalledAt = DateTime.UtcNow;
             Status = DeviceStatus.Off;
             Specifications = specifications;
+            Name = Name.Create(name);
         }
 
 
