@@ -11,10 +11,12 @@ namespace Domain
     {
         public string Value { get; }
 
-        public Name(string value) 
+        private Name(string value) 
         {
             if(string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException("Il nome non può essere vuoto", nameof(value));
-        } 
+                throw new ArgumentException("Value cannot be empty", nameof(value));
+        }
+
+        public Name Create(string value) => new Name(value);
     }
 } 
