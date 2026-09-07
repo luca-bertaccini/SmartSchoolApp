@@ -17,7 +17,6 @@ namespace Domain.ValueObject
                 throw new ArgumentException("Value cannot be empty", nameof(value));
             Value = value;
         }
-
         public Name Create(string value) => new Name(value);
     }
 } 

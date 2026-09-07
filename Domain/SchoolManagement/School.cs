@@ -9,10 +9,10 @@ namespace Domain.SchoolManagement
 {
     public class School
     {
-        public Guid SchoolId { get; set; }
-        public Name Name { get; set; }
-        public Guid OwnerId { get; set; }
-        public Address Address { get; set; }
+        public Guid SchoolId { get; private set; }
+        public Name Name { get; private set; }
+        public Guid OwnerId { get; private set; }
+        public Address Address { get; private set; }
 
         private School()
         {

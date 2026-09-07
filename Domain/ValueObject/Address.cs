@@ -29,10 +29,9 @@ namespace Domain.ValueObject
 
             if (string.IsNullOrWhiteSpace(cap))
                 throw new ArgumentException("Value cannot be empty", nameof(cap));
+
             CAP = cap;
         }
-
         public Address Create(string value , string city , string country , string cap) => new Address(value , city , country , cap);
-
     }
 }

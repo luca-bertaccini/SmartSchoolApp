@@ -9,9 +9,9 @@ namespace Domain.UserManagement
 {
     public class User
     {
-        public Guid UserId { get; }
-        public Email Email { get; set; }
-        public ZoneTime TimeZone { get; set; } //Ho chiamato "TimeZone" => "ZoneTime" poichè la prima parola rappresentava un costrutto giàpresente in c# dato obsoleto
-        public Locale State { get; set; }
+        public Guid UserId { get; private set; }
+        public Email Email { get; private set; }
+        public ZoneTime TimeZone { get; private set; } //Ho chiamato il value object "TimeZone" => "ZoneTime" poichè la prima parola rappresentava un costrutto giàpresente in c# dato obsoleto
+        public Locale State { get; private set; }
     }
 }
