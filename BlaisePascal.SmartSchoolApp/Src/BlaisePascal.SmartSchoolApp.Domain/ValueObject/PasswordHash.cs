@@ -9,7 +9,7 @@ namespace Domain.ValueObject
     public record PasswordHash
     {
         public string Value { get; }
-        private const int MinLength = 16; 
+        private const int MinLength = 16;
         private const int MaxLength = 32;
 
         private PasswordHash(string value)
@@ -17,9 +17,9 @@ namespace Domain.ValueObject
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Password cannot be empty.", nameof(value));
             if (value.Length < MinLength || value.Length > MaxLength)
-                throw new ArgumentException("The Password has to be between 16 and 32 figures" , nameof( value));
+                throw new ArgumentException("The Password has to be between 16 and 32 figures", nameof(value));
 
-            Value = value; 
+            Value = value;
         }
         public static PasswordHash Create(string hash) => new(hash);
     }

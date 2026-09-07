@@ -16,8 +16,8 @@ namespace Domain.ValueObject
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Value cannot be empty", nameof(value));
 
-            if(!value.Contains("@gmail.com"))
-                throw new ArgumentException("The Email has to contain @gmail.com to be authorized" , nameof(value));
+            if (!value.Contains("@gmail.com"))
+                throw new ArgumentException("The Email has to contain @gmail.com to be authorized", nameof(value));
 
             Value = value;
         }

@@ -13,5 +13,18 @@ namespace Domain.UserManagement
         public Email Email { get; private set; }
         public ZoneTime TimeZone { get; private set; } //Ho chiamato il value object "TimeZone" => "ZoneTime" poichè la prima parola rappresentava un costrutto giàpresente in c# dato obsoleto
         public Locale State { get; private set; }
+
+        public User(ZoneTime timeZone, Email email, Locale state)
+        {
+            UserId = Guid.NewGuid();
+            TimeZone = timeZone;
+            Email = email;
+            State = state;
+        }
+
+        public void RegisterUser()
+        {
+
+        }
     }
 }

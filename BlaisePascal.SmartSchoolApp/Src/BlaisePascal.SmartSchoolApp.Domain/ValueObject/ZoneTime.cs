@@ -11,7 +11,7 @@ namespace Domain.ValueObject
         public string Value { get; }
 
         private ZoneTime(string value)
-        {            
+        {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Timezone cannot be empty.", nameof(value));
 

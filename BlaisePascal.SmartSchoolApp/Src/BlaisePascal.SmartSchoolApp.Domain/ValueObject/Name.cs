@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Domain.ValueObject
 {
-    public record Name 
+    public record Name
     {
         public string Value { get; }
 
-        private Name(string value) 
+        private Name(string value)
         {
-            if(string.IsNullOrWhiteSpace(value))
+            if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Value cannot be empty", nameof(value));
             Value = value;
         }
         public Name Create(string value) => new Name(value);
     }
-} 
+}

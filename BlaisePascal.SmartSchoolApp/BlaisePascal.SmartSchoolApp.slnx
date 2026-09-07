@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Data/" />
+  <Folder Name="/Docs/" />
+  <Folder Name="/Src/">
+    <Project Path="Src/BlaisePascal.SmartSchoolApp.Domain/BlaisePascal.SmartSchoolApp.Domain.csproj" Id="b24ed594-10c8-469b-bab4-8837a38fb618" />
+  </Folder>
+  <Folder Name="/Test/" />
+</Solution>
