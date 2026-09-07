@@ -11,7 +11,7 @@ namespace Domain.ValueObject
     {
         public string Value { get; set; }
 
-        private Email(string value)
+        public Email(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Value cannot be empty", nameof(value));

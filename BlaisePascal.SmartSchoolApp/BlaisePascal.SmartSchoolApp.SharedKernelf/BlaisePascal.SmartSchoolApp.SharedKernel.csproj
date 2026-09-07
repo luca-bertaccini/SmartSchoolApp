@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\BlaisePascal.SmartSchoolApp.SharedKernelf\BlaisePascal.SmartSchoolApp.SharedKernel.csproj" />
-  </ItemGroup>
-
 </Project>

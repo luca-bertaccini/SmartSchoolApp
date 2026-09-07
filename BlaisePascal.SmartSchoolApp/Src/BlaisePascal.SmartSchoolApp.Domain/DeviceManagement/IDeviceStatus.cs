@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.SchoolManagement
+namespace Domain.DeviceManagement
 {
-    public enum Role
+    public enum IDeviceStatus
     {
-        Owner,
-        Admin,
-        User
+        On,
+        Off,
+        Standby
     }
 }

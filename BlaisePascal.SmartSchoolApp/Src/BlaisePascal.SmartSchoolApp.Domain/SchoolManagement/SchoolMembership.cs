@@ -6,9 +6,9 @@ namespace Domain.SchoolManagement
     {
         public Guid SchoolId { get; }   // Id della scuola e dello studente
         public Guid UserId { get; }
-        public Role Role { get; private set; }
+        public IRole Role { get; private set; }
 
-        public SchoolMembership(Guid schoolId, Guid userId, Role role)
+        public SchoolMembership(Guid schoolId, Guid userId, IRole role)
         {
             SchoolId = schoolId;
             UserId = userId;

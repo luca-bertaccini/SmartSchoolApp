@@ -8,7 +8,7 @@ namespace Domain.ValueObject
 {
     public record PasswordHash
     {
-        public string Value { get; }
+        public string Value { get; private set; }
         private const int MinLength = 16;
         private const int MaxLength = 32;
 

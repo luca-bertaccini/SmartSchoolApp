@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.DeviceManagement
 {
-    public enum EnergyProfile
+    public enum ISpecifications
     {
-        Eco,
-        Normal,
-        HighPerformance
+        Wattage,
+        LifespanHours,
+        ColorTemperature
     }
 }

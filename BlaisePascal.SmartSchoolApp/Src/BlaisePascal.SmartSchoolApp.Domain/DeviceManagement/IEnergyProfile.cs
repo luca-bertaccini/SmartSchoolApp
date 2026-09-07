@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.DeviceManagement
 {
-    public enum DeviceStatus
+    public enum IEnergyProfile
     {
-        On,
-        Off,
-        Standby
+        Eco,
+        Normal,
+        HighPerformance
     }
 }

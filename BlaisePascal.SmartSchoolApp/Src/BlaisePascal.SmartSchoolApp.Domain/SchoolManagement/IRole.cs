@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.DeviceManagement
+namespace Domain.SchoolManagement
 {
-    public enum Specifications
+    public enum IRole
     {
-        Wattage,
-        LifespanHours,
-        ColorTemperature
+        Owner,
+        Admin,
+        User
     }
 }

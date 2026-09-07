@@ -2,6 +2,8 @@
   <Folder Name="/Data/" />
   <Folder Name="/Docs/" />
   <Folder Name="/Src/">
+    <Project Path="BlaisePascal.SmartSchoolApp.SharedKernelf/BlaisePascal.SmartSchoolApp.SharedKernel.csproj" Id="2ba2c07e-afe6-4af1-a3c9-58e1acf624fd" />
+    <Project Path="Src/BlaisePascal.SmartSchoolApp.Application/BlaisePascal.SmartSchoolApp.Application.csproj" Id="d61aab36-475d-486d-92eb-6b420295d173" />
     <Project Path="Src/BlaisePascal.SmartSchoolApp.Domain/BlaisePascal.SmartSchoolApp.Domain.csproj" Id="b24ed594-10c8-469b-bab4-8837a38fb618" />
   </Folder>
   <Folder Name="/Test/" />

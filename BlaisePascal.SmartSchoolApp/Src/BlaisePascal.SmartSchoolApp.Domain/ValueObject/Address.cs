@@ -13,7 +13,7 @@ namespace Domain.ValueObject
         public string Country { get; }
         public string City { get; }
 
-        private Address(string street, string city, string country, string cap)
+        public Address(string street, string city, string country, string cap)
         {
             if (string.IsNullOrWhiteSpace(street))
                 throw new ArgumentException("Value cannot be empty", nameof(street));

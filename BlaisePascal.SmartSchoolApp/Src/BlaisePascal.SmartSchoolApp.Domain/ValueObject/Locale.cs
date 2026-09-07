@@ -6,7 +6,7 @@ namespace Domain.ValueObject
     {
         public string Value { get; }
 
-        private Locale(string value)
+        public Locale(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("You Have to indicate your state of belonging , for example it-IT");
