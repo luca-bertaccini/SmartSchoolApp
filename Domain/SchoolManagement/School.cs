@@ -12,6 +12,7 @@ namespace Domain.SchoolManagement
         public Guid SchoolId { get; set; }
         public Name Name { get; set; }
         public Guid OwnerId { get; set; }
+        public Address Address { get; set; }
 
         private School()
         {
@@ -19,6 +20,9 @@ namespace Domain.SchoolManagement
             OwnerId = Guid.NewGuid();
         }
 
-        public School CreateSchool() => new School();
+        public School CreateSchool() => new School(); 
+
+        public void InviteUserToSchool() { } // Necessita della classe User
+
     }
 }

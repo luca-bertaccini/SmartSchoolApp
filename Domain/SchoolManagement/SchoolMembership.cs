@@ -1,17 +1,18 @@
-﻿namespace Domain.SchoolManagement
+﻿using Domain.UserManagement;
+
+namespace Domain.SchoolManagement
 {
     public class SchoolMembership
     {
-        public Guid SchoolId { get; set; }   // Id della scuola e dello studente
-        public Guid UserID { get; set; }
-        public string Role { get; set; }
+        public Guid SchoolId { get; }   // Id della scuola e dello studente
+        public Guid UserId { get; }
+        public Role Role { get; private set; }
 
-        public SchoolMembership(string role)
+        public SchoolMembership(Guid schoolId, Guid userId, Role role)
         {
-            
+            SchoolId = schoolId;
+            UserId = userId;
             Role = role;
-            Guid SchoolID = Guid.NewGuid();
-            Guid UserID = Guid.NewGuid();
         }
     }
 }
