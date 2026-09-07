@@ -19,7 +19,7 @@ namespace Domain.ValueObject
             if (value.Length < MinLength || value.Length > MaxLength)
                 throw new ArgumentException("The Password has to be between 16 and 32 figures" , nameof( value));
 
-            Value = value;
+            Value = value; //
         }
 
         public static PasswordHash Create(string hash) => new(hash);
