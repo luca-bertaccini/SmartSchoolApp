@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlaisePascal.SmartSchoolApp.Domain.UserManagement;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,15 @@ namespace Domain.ValueObject
     public record PasswordHash
     {
         public string Value { get; private set; }
-        private const int MinLength = 16;
-        private const int MaxLength = 32;
+        private const int MinLength = 8;
+        private const int MaxLength = 16;
 
         private PasswordHash(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException("Password cannot be empty.", nameof(value));
+                 Result.Failure(UserErrors.PasswordNullOrEmpty);
             if (value.Length < MinLength || value.Length > MaxLength)
-                throw new ArgumentException("The Password has to be between 16 and 32 figures", nameof(value));
+                Result.Failure(UserErrors.PasswordOutOfLenght);
 
             Value = value;
         }
