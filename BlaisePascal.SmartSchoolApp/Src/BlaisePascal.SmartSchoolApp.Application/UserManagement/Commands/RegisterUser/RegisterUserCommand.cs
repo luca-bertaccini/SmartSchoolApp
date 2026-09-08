@@ -7,9 +7,9 @@ using System.Text;
 namespace BlaisePascal.SmartSchoolApp.Application.UserManagement.Commands.RegisterUser
 {
     public sealed record RegisterUserCommand(
-    string Email,
-    string PlainPassword,
-    string Timezone,
-    string Locale
+    string email,
+    string plainPassword,
+    string timezone,
+    string locale
 ) : IRequest<Result<Guid>>;
 }

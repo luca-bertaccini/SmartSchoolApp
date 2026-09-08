@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlaisePascal.SmartSchoolApp.SharedKernel
 {
-    public enum IErrorType
+    public enum ErrorType
     {
         Failure = 0,
         Validation = 1,
