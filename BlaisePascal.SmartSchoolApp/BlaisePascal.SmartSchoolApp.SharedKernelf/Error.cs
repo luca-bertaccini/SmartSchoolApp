@@ -8,10 +8,10 @@ namespace BlaisePascal.SmartSchoolApp.SharedKernel
 {
     public record Error
     {
-        public static readonly Error None = new(string.Empty, string.Empty, IErrorType.Failure);
-        public static readonly Error NullValue = new("General.Null", "Null value was provided", IErrorType.Failure);
+        public static readonly Error None = new(string.Empty, string.Empty, ErrorType.Failure);
+        public static readonly Error NullValue = new("General.Null", "Null value was provided", ErrorType.Failure);
 
-        public Error(string code, string description, IErrorType type)
+        public Error(string code, string description, ErrorType type)
         {
             Code = code;
             Description = description;
@@ -22,14 +22,14 @@ namespace BlaisePascal.SmartSchoolApp.SharedKernel
 
         public string Description { get; }
 
-        public IErrorType Type { get; }
+        public ErrorType Type { get; }
 
-        public static Error Failure(string code, string description) => new(code, description, IErrorType.Failure);
+        public static Error Failure(string code, string description) => new(code, description, ErrorType.Failure);
 
-        public static Error NotFound(string code, string description) => new(code, description, IErrorType.NotFound);
+        public static Error NotFound(string code, string description) => new(code, description, ErrorType.NotFound);
 
-        public static Error Problem(string code, string description) => new(code, description, IErrorType.Problem);
+        public static Error Problem(string code, string description) => new(code, description, ErrorType.Problem);
 
-        public static Error Conflict(string code, string description) => new(code, description, IErrorType.Conflict);
+        public static Error Conflict(string code, string description) => new(code, description, ErrorType.Conflict);
     }
 }

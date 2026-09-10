@@ -25,7 +25,7 @@ namespace BlaisePascal.SmartSchoolApp.Application.UserManagement.Commands
 
         public Task<Result<Guid>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
-            var existingUserResult = _userRepository.GetByEmail(request.Email);
+            var existingUserResult = _userRepository.GetByEmail(request.email);
             if (existingUserResult.IsSuccess)
             {
                 return Task.FromResult(Result<Guid>.Failure(
@@ -33,15 +33,15 @@ namespace BlaisePascal.SmartSchoolApp.Application.UserManagement.Commands
                 ));
             }
 
-            var hashResult = _passwordHasher.Hash(request.PlainPassword);
+            var hashResult = _passwordHasher.Hash(request.plainPassword);
             if (hashResult.IsFailure)
             {
                 return Task.FromResult(Result<Guid>.Failure(hashResult.Error));
             }
 
-            var email = new Email(request.Email);
-            var zoneTime = new ZoneTime(request.Timezone);
-            var locale = new Locale(request.Locale);
+            var email = new Email(request.email);
+            var zoneTime = new ZoneTime(request.timezone);
+            var locale = new Locale(request.locale);
             var passwordHash = PasswordHash.Create(hashResult.Value);
 
             var user = new User(zoneTime, email, locale, passwordHash);
