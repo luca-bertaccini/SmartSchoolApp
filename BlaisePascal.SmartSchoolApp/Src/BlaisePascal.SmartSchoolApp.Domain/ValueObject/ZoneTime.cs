@@ -27,12 +27,12 @@ namespace Domain.ValueObject
         {
             try
             {
-                TimeZoneInfo.FindSystemTimeZoneById(value); //Come in Locale ho trovato una classe con una funzione che ti controlla se il fusorario dato esiste , se non c'è va al catch e ritorna falso
+                TimeZoneInfo.FindSystemTimeZoneById(value);
                 return true;
             }
             catch (TimeZoneNotFoundException)
             {
-                return false; //Il fusorario non esiste
+                return false; 
             }
         }
     }

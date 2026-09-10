@@ -8,7 +8,7 @@ namespace Domain.ValueObject
 {
     public record Address
     {
-        public string Street { get; } //Tutto ciò che ha un indirizzo
+        public string Street { get; }
         public string CAP { get; }
         public string Country { get; }
         public string City { get; }

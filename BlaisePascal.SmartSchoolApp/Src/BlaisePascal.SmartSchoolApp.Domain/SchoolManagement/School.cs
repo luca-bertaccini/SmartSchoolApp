@@ -24,7 +24,7 @@ namespace Domain.SchoolManagement
 
         public School CreateSchool() => new School();
 
-        public void InviteUserToSchool() { } // Necessita della classe User
+        public void InviteUserToSchool() { }
 
     }
 }

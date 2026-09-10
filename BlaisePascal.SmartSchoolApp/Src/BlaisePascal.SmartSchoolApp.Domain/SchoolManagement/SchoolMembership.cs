@@ -4,7 +4,7 @@ namespace Domain.SchoolManagement
 {
     public class SchoolMembership
     {
-        public Guid SchoolId { get; }   // Id della scuola e dello studente
+        public Guid SchoolId { get; }
         public Guid UserId { get; }
         public IRole Role { get; private set; }
 
