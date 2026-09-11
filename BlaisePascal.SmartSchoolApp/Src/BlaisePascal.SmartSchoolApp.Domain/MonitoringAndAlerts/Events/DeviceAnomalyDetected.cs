@@ -1,5 +1,4 @@
-﻿using BlaisePascal.SmartSchoolApp.SharedKernel;
-using Domain.MonitoringAndAlerts.Events;
+using BlaisePascal.SmartSchoolApp.SharedKernel;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -2,6 +2,7 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using BlaisePascal.SmartSchoolApp.SharedKernel;
 
 namespace BlaisePascal.SmartSchoolApp.Application.SchoolManagement.Commands.InviteUserToSchool
 {
@@ -13,7 +14,7 @@ namespace BlaisePascal.SmartSchoolApp.Application.SchoolManagement.Commands.Invi
 
         public Task<Result<Guid>> Handle(InviteUserToSchoolCommand request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(Result<Guid>.Failure(Error.None)); // Scaffold implementation
+            return Task.FromResult(Result<Guid>.Failure(Error.None));
         }
     }
 }

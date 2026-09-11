@@ -2,6 +2,7 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using BlaisePascal.SmartSchoolApp.SharedKernel;
 
 namespace BlaisePascal.SmartSchoolApp.Application.DeviceManagement.Commands.TurnDeviceOff
 {
@@ -13,7 +14,7 @@ namespace BlaisePascal.SmartSchoolApp.Application.DeviceManagement.Commands.Turn
 
         public Task<Result<Guid>> Handle(TurnDeviceOffCommand request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(Result<Guid>.Failure(Error.None)); // Scaffold implementation
+            return Task.FromResult(Result<Guid>.Failure(Error.None)); 
         }
     }
 }

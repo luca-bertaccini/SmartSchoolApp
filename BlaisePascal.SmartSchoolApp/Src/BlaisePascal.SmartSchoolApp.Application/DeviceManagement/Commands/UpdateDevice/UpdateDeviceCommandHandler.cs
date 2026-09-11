@@ -2,6 +2,7 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using BlaisePascal.SmartSchoolApp.SharedKernel;
 
 namespace BlaisePascal.SmartSchoolApp.Application.DeviceManagement.Commands.UpdateDevice
 {
@@ -13,7 +14,7 @@ namespace BlaisePascal.SmartSchoolApp.Application.DeviceManagement.Commands.Upda
 
         public Task<Result<Guid>> Handle(UpdateDeviceCommand request, CancellationToken cancellationToken)
         {
-            return Task.FromResult(Result<Guid>.Failure(Error.None)); // Scaffold implementation
+            return Task.FromResult(Result<Guid>.Failure(Error.None)); 
         }
     }
 }
